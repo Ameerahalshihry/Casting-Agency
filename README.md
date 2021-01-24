@@ -1,12 +1,16 @@
 # Casting Agency Capstone Project
 
-The project is a webpage for Casting Agency Company that is responsible for creating movies and managing and assigning actors to those movies. 
+The project is a webpage for Casting Agency Company that is responsible for creating movies and managing and assigning actors to those movies.
 This project will provide these functionality below:
 
 1) Display movies and actors.
 2) Delete movies and actors.
 3) Add movie and actor.
 4) Modify movie and actor.
+
+#  The motivation behind this project
+
+I developed this project to make use of the knowledge you acquired in this Udacity Full Stack  Nanodegree and hence gain confidence in these skills.
 
 # Casting Agency API Backend
 
@@ -29,7 +33,7 @@ We recommend working within a virtual environment whenever using Python for proj
 Once you have your virtual environment setup and running, install dependencies by naviging to the `/backend` directory and running:
 
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 This will install all of the required packages we selected within the `requirements.txt` file.
@@ -49,14 +53,14 @@ From within the `backend` directory first ensure you are working using your crea
 To run the server, execute:
 
 ```bash
-export FLASK_APP=flaskr
+export FLASK_APP=app.py
 export FLASK_ENV=development
 flask run
 ```
 
 Setting the `FLASK_ENV` variable to `development` will detect file changes and restart the server automatically.
 
-Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` directory and the `__init__.py` file to find the application. 
+Setting the `FLASK_APP` variable to the `app.py` file to find the application. 
 
 
 ## Error Handling
@@ -215,3 +219,14 @@ dropdb casting_agency_test
 createdb casting_agency_test
 python3 test_app.py
 ```
+## THIRD-PARTY AUTHENTICATION
+#### auth.py
+Auth0 is set up and running. The following configurations are in a setup.sh file which is exported by the app:
+- The Auth0 Domain Name
+- The JWT code signing secret
+- The Auth0 Client ID
+The JWT token contains the permissions for the 'assistant', 'director' and 'producer' roles.
+
+## DEPLOYMENT
+The app is hosted live on heroku at the URL: 
+https://casting-agency-udacity-project.herokuapp.com/
